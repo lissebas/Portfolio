@@ -26,48 +26,46 @@ function copyText() {
     });
 }
 
+// Seleccionar todos los elementos de la galería y los dots
+const items = document.querySelectorAll('.gallery-item');
+const dots = document.querySelectorAll('.dot');
+
 let currentIndex = 0;
+let intervalId;
 
-function showSlide(index) {
-  let slides = document.getElementsByClassName("gallery-item");
-  let dots = document.getElementsByClassName("dot");
+// Función para actualizar la visualización de las figuras
+function updateGallery(index) {
+  // Quitar la clase 'active' de todas las figuras y dots
+  items.forEach(item => item.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
 
-  if (index >= slides.length) { currentIndex = 0; }
-  if (index < 0) { currentIndex = slides.length - 1; }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
-  }
-
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("active");
-  }
-
-  slides[currentIndex].classList.add("active");
-  dots[currentIndex].classList.add("active");
+  // Mostrar la figura y dot correspondiente al índice actual
+  items[index].classList.add('active');
+  dots[index].classList.add('active');
 }
 
-function changeSlide(n) {
-  showSlide(currentIndex += n);
+// Función para la transición automática cada 5 segundos
+function startGallery() {
+  intervalId = setInterval(() => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateGallery(currentIndex);
+  }, 5000);
 }
 
-function setSlide(n) {
-  showSlide(currentIndex = n);
+// Detener la transición automática
+function stopGallery() {
+  clearInterval(intervalId);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  let projects = document.querySelector('.projects');
-  let dotsContainer = projects.querySelector('.dots');
-  let slides = projects.getElementsByClassName("gallery-item");
+// Iniciar la galería
+startGallery();
 
-  for (let i = 0; i < slides.length; i++) {
-    let dot = document.createElement("span");
-    dot.classList.add("dot");
-    dot.setAttribute("onclick", "setSlide(" + i + ")");
-    dotsContainer.appendChild(dot);
-  }
-
-  // Mostrar la primera diapositiva
-  showSlide(currentIndex);
+// Añadir funcionalidad a los dots para permitir clics manuales
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateGallery(index);
+    stopGallery(); // Detener la transición automática al hacer clic en un dot
+  });
 });
 

@@ -10,54 +10,111 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'> <!-- Normalización CSS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css'/>
     <link rel='stylesheet' href='public/styles/styles.css'> <!-- Archivo CSS personalizado -->
+    <link rel='stylesheet' href='public/styles/mobile.css'> <!-- Archivo CSS personalizado -->
     <!-- Incluye SweetAlert2 CSS y JavaScript -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
 </head>
 <body>
+
+  <!-- main container -->  
     <main class='container'>
-        <div class='profile'>
-          <img class='profile-picture' src='public/img/profile.png' alt='profile img'>
-          <p class="description">
-              Estudiante de <a href="#">Ciencia de Datos</a>, apasionado por la innovación e implementación de las tecnologías emergentes en la industria y la aplicabilidad de la <a href="#">Ciencia de Datos</a> en la toma de decisiones empresarial.
-          </p>
 
-          <div class='social-network'>
-              <a href='https://github.com/lissebas' target='_blank' class='social-item'>
-                  <i class='fab fa-github'></i>
-              </a>
-              <a href='https://www.linkedin.com/in/sebastian-g%C3%B3mez-2237082b8/' target='_blank' class='social-item'>
-                  <i class='fab fa-linkedin'></i>
-              </a>
-              <button onclick="copyText()" id='email' class='social-item'>
-                  <i class='fas fa-envelope'></i>
-              </button>
-          </div>
-      </div>
- 
-      <div class="projects">
-        <figure class="gallery-item">
-          <h1 class="title">Data-Science-Notes</h1>
-          <p class="description">Proyecto personal donde llevo registro de mis apuntes sobre ciencia de datos</p>
-        </figure>
+      <!-- right section -->
+  <div class='profile sub-container'>
+    <!-- image profile-->
+    <img class='profile-picture' src='public/img/profile.png' alt='profile img'>
+    <!-- name -->
+    <h2>Sebastian Gómez</h2>
+    <!-- profile description -->
+    <p class="description">
+      Estudiante de <a href="#">Ciencia de Datos</a>, apasionado por la
+      innovación e implementación de las tecnologías emergentes en la
+      industria y la aplicabilidad de la <a href="#">Ciencia de Datos</a>
+      en la toma de decisiones empresarial.
+    </p>
+    <!-- contact to me -->
+    <div class='social-network'>
+      <a href='https://github.com/lissebas' target='_blank' class='social-item'>
+        <i class='fab fa-github'></i>
+      </a>
+      <a href='https://www.linkedin.com/in/sebastian-g%C3%B3mez-2237082b8/' target='_blank' class='social-item'>
+        <i class='fab fa-linkedin'></i>
+      </a>
+      <button onclick="copyText()" id='email' class='social-item'>
+        <i class='fas fa-envelope'></i>
+      </button>
+    </div>
+  </div> 
 
-        <figure class="gallery-item">
-          <h1 class="title">Transmilenio Density Model</h1>
-          <p class="description">Modelado de densidad de usuarios de Transmilenio por localidades.</p>
-        </figure>
-
-        <figure class="gallery-item">
-          <h1 class="title">DeFi Application</h1>
-          <p class="description">Aplicativo finaciero enfocado en análisis de Merton.</p>
-        </figure>
-        <!-- Agregar más gallery-item aquí si es necesario -->
-
-        <div class="dots">
-          <!-- Se agregarán los dots dinámicamente -->
+  <!-- left section -->
+  <div class="projects sub-container">
+    <!-- first item -->
+    <figure class="gallery-item active">
+      <h1 class="title">Data-Science-Notes</h1>
+      <p class="description">Proyecto personal donde llevo registro de mis apuntes sobre ciencia de datos</p>
+      <div class='skills'>
+    
+        <div class='technical'>
+          <p class='skill-item'>Python<p>
+          <p class='skill-item'>Programación orientada a objetos<p>
         </div>
-
+        
+        <div class='soft'>
+          <p class='skill-item'>Trabajo en equipo<p>
+          <p class='skill-item'>Programación orientada a objetos<p>
+        </div>
       </div>
+    </figure>
+
+    <!-- second item -->
+    <figure class="gallery-item">
+      <h1 class="title">Transmilenio Demography Model</h1>
+      <p class="description">Modelado de densidad de usuarios de Transmilenio por localidades.</p>
+
+      <div class='skills'>
+    
+        <div class='technical'>
+          <p class='skill-item'>Python<p>
+          <p class='skill-item'>Programación orientada a objetos<p>
+        </div>
+        
+        <div class='soft'>
+          <p class='skill-item'>Trabajo en equipo<p>
+          <p class='skill-item'>Programación orientada a objetos<p>
+        </div>
+      </div>
+
+
+    </figure>
+
+    <!-- third item -->
+    <figure class="gallery-item">
+      <h1 class="title">DeFi Application</h1>
+      <p class="description">Aplicativo financiero enfocado en análisis de Merton.</p>
+      <div class='skills'>
+    
+        <div class='technical'>
+          <p class='skill-item'>Python<p>
+          <p class='skill-item'>Programación orientada a objetos<p>
+        </div>
+        
+        <div class='soft'>
+          <p class='skill-item'>Trabajo en equipo<p>
+          <p class='skill-item'>Programación orientada a objetos<p>
+        </div>
+      </div>
+    </figure>
+
+    <!-- gallery items select -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
 
 
 

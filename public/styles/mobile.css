@@ -1,34 +1,13 @@
-/* Estilos generales */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
-}
-
 /* Contenedor principal */
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 90vh;
+    width: 90vw:
+  }
 }
 
-/* Estilos de la sección de perfil */
-.sub-container {
-  height: 80vh;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ccc; /* Borde gris */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  text-align: center;
-}
-
-.profile {
-  width: 35vw;
-}
 
 /* Imagen de perfil */
 .profile-picture {
@@ -106,7 +85,6 @@ body {
 
 /* Contenedor de los proyectos */
 .projects {
-  width: 55vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
