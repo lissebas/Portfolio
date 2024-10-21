@@ -140,6 +140,18 @@ body {
 
 .skills {
   display: flex;
+  gap: 20px; /* Espacio entre las secciones de habilidades */
+}
+
+.technical, .soft {
+  display: flex;
+  flex-direction: column; /* Asegura que los items se alineen verticalmente */
+}
+
+.section-title {
+  font-size: 1.2em; /* Ajusta el tamaño del título */
+  margin-bottom: 10px; /* Espacio entre el título y los items */
+  color: #333; /* Color del título */
 }
 
 .skill-item {
@@ -148,7 +160,9 @@ body {
   padding: 5px 14px;
   color: white;
   border-radius: 20px;
+  margin-bottom: 5px; /* Espacio entre los items */
 }
+
 
 
 /* Estilos para los dots */
@@ -156,6 +170,8 @@ body {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  justify-content: center;
+  width: 100%;
 }
 
 .dot {

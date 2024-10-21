@@ -1,149 +1,98 @@
 /* Contenedor principal */
 @media (max-width: 850px) {
   .container {
+    display: flex; 
     flex-direction: column;
-    justify-content: flex-start;
-    height: 90vh;
-    width: 90vw:
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .sub-container {
+    height: 100vh;
+    width: 80vw;
+    margin: 40px 0 10px 0;
+  }
+
+  /* Imagen de perfil */
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+
+  /* Nombre del perfil */
+  .profile h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  /* Descripción del perfil */
+  .description {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666;
+  }
+
+  /* Red de contacto social */
+  .social-network {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre íconos */
+  }
+
+  .social-item {
+    font-size: 1.5em;
+    color: white;
+    background-color: #0073e6;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* Contenedor de los proyectos */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+
+  .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a2a3a; /* Color similar al de la imagen */
+  }
+
+  .description {
+    font-size: 1.2em;
+    color: #3b4c5d; /* Color suave como el de la imagen */
+  }
+
+  .skills {
+    display: flex;
+  }
+
+  .skill-item {
+    background-color: #5D3FD3;
+    display: inline-block;
+    padding: 5px 14px;
+    color: white;
+    border-radius: 20px;
   }
 }
 
-
-/* Imagen de perfil */
-.profile-picture {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #e0e0e0;
-  margin-bottom: 20px;
-}
-
-/* Nombre del perfil */
-.profile h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-/* Descripción del perfil */
-.description {
-  font-size: 1em;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  color: #666;
-}
-
-.description a {
-  color: #1E90FF;
-  text-decoration: none;
-  cursor: disabled;
-}
-
-.description a:hover {
-  text-decoration: none;
-  cursor: disabled;
-}
-
-/* Red de contacto social */
-.social-network {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Espacio entre íconos */
-}
-
-.social-item {
-  font-size: 1.5em;
-  color: white;
-  background-color: #0073e6;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.social-item:hover {
-  background-color: #005bb5;
-}
-
-/* Estilos del botón de correo electrónico */
-#email {
-  background-color: #0073e6;
-  border: none;
-  outline: none;
-  padding: 0;
-}
-
-#email:hover {
-  background-color: #005bb5;
-}
-
-/* Contenedor de los proyectos */
-.projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 40px;
-  box-sizing: border-box;
-}
-
-/* Estilo de las figuras */
-.gallery-item {
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.gallery-item.active {
-  display: block;
-  opacity: 1;
-}
-
-.title {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #1a2a3a; /* Color similar al de la imagen */
-}
-
-.description {
-  font-size: 1.2em;
-  color: #3b4c5d; /* Color suave como el de la imagen */
-}
-
-.skills {
-  display: flex;
-}
-
-.skill-item {
-  background-color: #5D3FD3;
-  display: inline-block;
-  padding: 5px 14px;
-  color: white;
-  border-radius: 20px;
-}
-
-
-/* Estilos para los dots */
-.dots {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #ccc;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #1a2a3a; /* Color similar al de la imagen */
-}
